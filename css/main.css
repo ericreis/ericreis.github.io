@@ -371,6 +371,10 @@ input.search-form:hover {
   -moz-border-radius: 150px;
 }
 
+#skills{
+  margin: 0 0;
+}
+
 #main-slider {
   position: relative;
 }
