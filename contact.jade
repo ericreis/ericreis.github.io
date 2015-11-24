@@ -1,0 +1,64 @@
+include ./layouts/default.jade
+
+include ./layouts/header.jade
+
+section#contact-info
+  .center
+    h2 How to Reach Us?
+  .gmap-area
+    .container
+      .row
+        .col-sm-5.text-center
+          .gmap
+            iframe(frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.492890844028!2d-43.234450684986655!3d-22.85824384188753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997938130da7d7%3A0x361a13ea50c1e06e!2sNucleo+de+Computa%C3%A7%C3%A3o+Eletr%C3%B4nica+(NCE)!5e0!3m2!1spt-BR!2sbr!4v1448399887624')
+        .col-sm-7.map-content
+          ul.row
+            li.col-sm-6
+              address
+                h5 Núcleo de Computação Eletrônica - NCE
+                p
+                  | Av. Athos da Silveira Ramos
+                  br
+                  |                                     Cidade Universitária, Rio de Janeiro - RJ, 21941-590 
+                p
+                  | Phone: +55 (21) 3938-3202 
+                  br
+                  |                                     Email Address: eric_reisfig@poli.ufrj.br
+// /gmap_area
+section#contact-page
+  .container
+    .center
+      h2 Drop Your Message (NOT WORKING!)
+      p.lead If you want to contact me, just use the form below
+    .row.contact-wrap
+      .status.alert.alert-success(style='display: none')
+      form#main-contact-form.contact-form(name='contact-form', method='post', action='sendemail.php')
+        .col-sm-5.col-sm-offset-1
+          .form-group
+            label Name *
+            input.form-control(type='text', name='name', required='required')
+          .form-group
+            label Email *
+            input.form-control(type='email', name='email', required='required')
+          .form-group
+            label Phone
+            input.form-control(type='number')
+          .form-group
+            label Company Name
+            input.form-control(type='text')
+        .col-sm-5
+          .form-group
+            label Subject *
+            input.form-control(type='text', name='subject', required='required')
+          .form-group
+            label Message *
+            textarea#message.form-control(name='message', required='required', rows='8')
+          .form-group
+            button.btn.btn-primary.btn-lg(type='submit', name='submit', required='required', action='sendemail.php') Submit Message
+    // /.row
+  // /.container
+// /#contact-page
+
+include ./layouts/bottom.jade
+
+include ./layouts/footer.jade

@@ -1,0 +1,112 @@
+include ./layouts/default.jade
+
+include ./layouts/header.jade
+
+section#about
+  .container
+    .team
+      .row.clearfix
+        .single-profile-top.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+          .media
+            .pull-left
+              a(href='https://github.com/ericreis')
+                img.media-object(src='images/me.jpg', alt='')
+            .media-body
+              h4 Eric Reis Figueiredo
+              h5 Mechanical Engeneering Undergraduate
+              ul.tag.clearfix
+                li.btn
+                  a(href='#') Programming
+                li.btn
+                  a(href='#') Data Structures
+                li.btn
+                  a(href='#') Web Development
+              ul.social_icons
+                li
+                  a(href='https://www.facebook.com/ericreis.figueiredo')
+                    i.fa.fa-facebook
+                li
+                  a(href='#')
+                    i.fa.fa-twitter
+                li
+                  a(href='https://plus.google.com/+EricReisFigueiredo')
+                    i.fa.fa-google-plus
+          // /.media
+          p
+            | An undergraduate student from Federal University of Rio de Janeiro (UFRJ).
+            | Momentarily matriculated in Mechanical Engineering but eager to change to
+            | Computer Engeneering. Experienced in software development for Android and
+            | desktops. Deeply knows C/C++, Java and Python.
+    // Our Skill
+    .skill-wrap.clearfix
+      .center.wow.fadeInDown
+        h2 My Skills
+        p.lead
+          | List of all my skills and their level. Those with the lower level
+          br
+          | will be priority for next studies.
+      .row
+        .col-sm-3
+          .sinlge-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+            .c-skill
+              p
+                em 85%
+              p C/C++
+        .col-sm-3
+          .sinlge-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='600ms')
+            .java-skill
+              p
+                em 90%
+              p Java
+        .col-sm-3
+          .sinlge-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='900ms')
+            .python-skill
+              p
+                em 95%
+              p Python
+        .col-sm-3
+          .sinlge-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='1200ms')
+            .js-skill
+              p
+                em 65%
+              p JavaScript
+        .col-sm-3
+          .sinlge-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+            .data-structure-skill
+              p
+                em 85%
+              p Data Structs (under study)
+        .col-sm-3
+          .sinlge-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='600ms')
+            .graph-teory-skill
+              p
+                em 60%
+              p Graph Teory (under study)
+        .col-sm-3
+          .sinlge-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='900ms')
+            .web-design-skill
+              p
+                em 65%
+              p Web Design
+        .col-sm-3
+          .sinlge-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='1200ms')
+            .jade-skill
+              p
+                em 85%
+              p Jade
+        .col-sm-3
+          .sinlge-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+            .html-skill
+              p
+                em 90%
+              p HTML/HTML5
+        .col-sm-3
+          .sinlge-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='600ms')
+            .css-skill
+              p
+                em 80%
+              p CSS/CSS3
+
+include ./layouts/bottom.jade
+
+include ./layouts/footer.jade
