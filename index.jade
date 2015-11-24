@@ -5,12 +5,12 @@ include ./layouts/header.jade
 section#main-slider.no-margin
   .carousel.slide
     .carousel-inner
-      .item.active(style='background-image: url(images/slider/bg1.jpg)')
+      .item.active(style='background-image: url(images/slider/bg2.jpg)')
         .container
           .row.slide-margin
             .col-sm-6
               .carousel-content
-                h1.animation.animated-item-1 A little bit about myself
+                h1.animation.animated-item-1 About myself
                 h2.animation.animated-item-2 
                   | An undergraduate student from Federal University of Rio de Janeiro (UFRJ).
                   | Momentarily matriculated in Mechanical Engineering but eager to change to
@@ -19,8 +19,10 @@ section#main-slider.no-margin
                 a.btn-slide.animation.animated-item-3(href='#') Read More
             .col-sm-6.hidden-xs.animation.animated-item-4
               .slider-img
-                img.img-responsive(src='images/slider/img1.png')
+                img#img-me.img-responsive(src='images/me.png')
       // /.item
+
+include ./layouts/skills.jade
 
 include ./layouts/bottom.jade
 

@@ -26,7 +26,7 @@
   <!-- /head-->
   <body class="homepage"></body>
 </html>
-<header id="header" class="navbar-fixed-top">
+<header id="header">          .navbar-fixed-top
   <div class="top-bar">
     <div class="container">
       <div class="row">
@@ -81,12 +81,12 @@
 <section id="main-slider" class="no-margin">
   <div class="carousel slide">
     <div class="carousel-inner">
-      <div style="background-image: url(images/slider/bg1.jpg)" class="item active">
+      <div style="background-image: url(images/slider/bg2.jpg)" class="item active">
         <div class="container">
           <div class="row slide-margin">
             <div class="col-sm-6">
               <div class="carousel-content">
-                <h1 class="animation animated-item-1">A little bit about myself</h1>
+                <h1 class="animation animated-item-1">About myself</h1>
                 <h2 class="animation animated-item-2">
                    
                   An undergraduate student from Federal University of Rio de Janeiro (UFRJ).
@@ -97,7 +97,7 @@
               </div>
             </div>
             <div class="col-sm-6 hidden-xs animation animated-item-4">
-              <div class="slider-img"><img src="images/slider/img1.png" class="img-responsive"></div>
+              <div class="slider-img"><img id="img-me" src="images/me.png" class="img-responsive"></div>
             </div>
           </div>
         </div>
@@ -106,6 +106,74 @@
     </div>
   </div>
 </section>
+<section id="features"></section>
+<div class="container">
+  <div class="center wow fadeInDown">
+    <h2>My Skills</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+  </div>
+  <div class="row">
+    <div class="fadeInDown">
+      <div class="skill">
+        <div class="progress-wrap">
+          <h3>C/C++</h3>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%" class="progress-bar color2"><span class="bar-width">85%</span></div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <h3>Java</h3>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 90%" class="progress-bar color1"><span class="bar-width">90%</span></div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <h3>Python</h3>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%" class="progress-bar color1"><span class="bar-width">95%</span></div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <h3>JavaScript</h3>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 65%" class="progress-bar color4"><span class="bar-width">65%</span></div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <h3>CSS/CSS3</h3>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%" class="progress-bar color3"><span class="bar-width">80%</span></div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <h3>Web Design</h3>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 65%" class="progress-bar color4"><span class="bar-width">65%</span></div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <h3>Jade</h3>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 90%" class="progress-bar color1"><span class="bar-width">90%</span></div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <h3>HTML/HTML5</h3>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 90%" class="progress-bar color1"><span class="bar-width">90%</span></div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <h3>CSS/CSS3</h3>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%" class="progress-bar color3"><span class="bar-width">80%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.col-sm-6-->
+  </div>
+</div>
 <section id="bottom">
   <div data-wow-duration="1000ms" data-wow-delay="600ms" class="container wow fadeInDown">
     <div class="row">
@@ -188,11 +256,9 @@
     </div>
   </div>
 </footer>
-<!-- /#footer
-script(src='js/jquery.js')
-script(src='js/bootstrap.min.js')
-script(src='js/jquery.prettyPhoto.js')
-script(src='js/jquery.isotope.min.js')
-script(src='js/main.js')
-script(src='js/wow.min.js')
--->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
