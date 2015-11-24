@@ -1,0 +1,111 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title  Home | Eric Figueiredo 
+    // core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/font-awesome.min.css', rel='stylesheet')
+    link(href='css/animate.min.css', rel='stylesheet')
+    link(href='css/prettyPhoto.css', rel='stylesheet')
+    link(href='css/main.css', rel='stylesheet')
+    link(href='css/responsive.css', rel='stylesheet')
+    //if lt IE 9
+      script(src='js/html5shiv.js')
+      script(src='js/respond.min.js')
+    link(rel='shortcut icon', href='images/ico/favicon.ico')
+    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='images/ico/apple-touch-icon-144-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='images/ico/apple-touch-icon-114-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='images/ico/apple-touch-icon-72-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', href='images/ico/apple-touch-icon-57-precomposed.png')
+  // /head
+  body.homepage
+    header#header.navbar-fixed-top
+      .top-bar
+        .container
+          .row
+            .col-sm-6.col-xs-4
+              .top-number
+                p
+                  i.fa.fa-phone-square
+                  |   +55 (21) 99694-9605
+            .col-sm-6.col-xs-8
+              .social
+                ul.social-share
+                  li
+                    a(href='https://www.facebook.com/ericreis.figueiredo')
+                      i.fa.fa-facebook
+                  // <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  li
+                    a(href='https://www.linkedin.com/profile/view?id=AAIAABie5nwBJVZ7MVPLMURUhUaef22kqHDo7rM&trk=nav_responsive_tab_profile_pic')
+                      i.fa.fa-linkedin
+                  li
+                    a(href='skype:ericreisfigueiredo?call')
+                      i.fa.fa-skype
+                  li
+                    a(href='https://github.com/ericreis')
+                      i.fa.fa-github
+                  li
+                    a(href='https://bitbucket.org/ericreis/')
+                      i.fa.fa-bitbucket
+                .search
+                  form(role='form')
+                    input.search-form(type='text', autocomplete='off', placeholder='Search')
+                    i.fa.fa-search
+        // /.container
+      // /.top-bar
+      nav.navbar.navbar-inverse(role='banner')
+        .container
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='index.html')
+              img(src='images/logo.png', alt='logo')
+          .collapse.navbar-collapse.navbar-right
+            ul.nav.navbar-nav
+              li.active
+                a(href='index.html') Home
+              li
+                a(href='about-us.html') About Me
+              li
+                a(href='services.html') Projects
+              li
+                a(href='portfolio.html') Presentations
+              li
+                a(href='portfolio.html') Publications
+              li
+                a(href='contact-us.html') Contact
+        // /.container
+      // /nav
+    // /header
+    footer#footer.midnight-blue
+      .container
+        .row
+          .col-sm-6
+            | © 2013 
+            a(target='_blank', href='http://shapebootstrap.net/', title='Free Twitter Bootstrap WordPress Themes and HTML templates') ShapeBootstrap
+            | . All Rights Reserved.
+          .col-sm-6
+            ul.pull-right
+              li
+                a(href='#') Home
+              li
+                a(href='#') About Us
+              li
+                a(href='#') Faq
+              li
+                a(href='#') Contact Us
+    // /#footer
+    script(src='js/jquery.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/jquery.prettyPhoto.js')
+    script(src='js/jquery.isotope.min.js')
+    script(src='js/main.js')
+    script(src='js/wow.min.js')
+
