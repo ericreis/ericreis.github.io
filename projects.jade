@@ -1,0 +1,231 @@
+include ./layouts/default.jade
+
+include ./layouts/header.jade
+
+#blank(style='margin-top: 150px;')
+
+include ./layouts/projects.jade
+
+section#content
+  .container
+    .center.wow.fadeInDown
+      h2 Complete List
+    .row
+      .col-xs-14.col-sm-10.wow.fadeInDown.col-md-offset-1
+        h2 CGraph
+        .tab-wrap
+          .media
+            .parrent.pull-left
+              ul.nav.nav-tabs.nav-stacked
+                li.active
+                  a.tehnical(href='#cgraph-overview', data-toggle='tab') Overview
+                li
+                  a.tehnical(href='#cgraph-technologies', data-toggle='tab') Technologies Used
+                li
+                  a.tehnical(href='#cgraph-source', data-toggle='tab') Source Code
+            .parrent.media-body
+              .tab-content
+                #cgraph-overview.tab-pane.fade.active.in
+                  .media
+                    .pull-left
+                      img.img-responsive(src='images/projects/min/CGraph-min.jpg')
+                    .media-body
+                      h2 Overview
+                      p
+                        | An undervelopment C++ graph library. It makes use of most known data structures from STL
+                        | and some implementations. It uses templates, so it works with any data structure the user
+                        | would like for the Graph (AdjacencyVector, AdjacencyMatrix and AdjacencyMatrixPlus). The
+                        | AdjacencyMatrixPlus is implemented with std::bitset so it's able to store graphs with 500K
+                        | nodes with a 16Mb memory system.
+                #cgraph-technologies.tab-pane.fade
+                  .media
+                    .media-body
+                      h2 Technologies Used
+                      li C++
+                #cgraph-source.tab-pane.fade
+                  .media
+                    .media-body
+                      h2 Source Code
+                      a(href='https://github.com/ericreis/CGraph') https://github.com/ericreis/CGraph
+              // /.tab-content
+            // /.media-body
+          // /.media
+        // /.tab-wrap
+      // /.col-sm-6
+    // /.row
+    .row
+      .col-xs-14.col-sm-10.wow.fadeInDown.col-md-offset-1
+        h2 SurgeryNote
+        .tab-wrap
+          .media
+            .parrent.pull-left
+              ul.nav.nav-tabs.nav-stacked
+                li.active
+                  a.tehnical(href='#sn-overview', data-toggle='tab') Overview
+                li
+                  a.tehnical(href='#sn-technologies', data-toggle='tab') Technologies Used
+                li
+                  a.tehnical(href='#sn-source', data-toggle='tab') Source Code
+            .parrent.media-body
+              .tab-content
+                #sn-overview.tab-pane.fade.active.in
+                  .media
+                    .pull-left
+                      img.img-responsive(src='images/projects/min/SurgeryNote-min.jpg')
+                    .media-body
+                      h2 Overview
+                      p
+                        | An android app developed for Empresa Júnior Fluxo Consultoria. It's an app
+                        | that the main function is to store and organize surgeries for the surgeons
+                        | using the application. It has an upload system that sends an email to the
+                        | registered profile.
+                #sn-technologies.tab-pane.fade
+                  .media
+                    .media-body
+                      h2 Technologies Used
+                      li Java
+                #sn-source.tab-pane.fade
+                  .media
+                    .media-body
+                      h2 Source Code
+                      a(href='https://github.com/ericreis/SurgeryNote') https://github.com/ericreis/SurgeryNote
+              // /.tab-content
+            // /.media-body
+          // /.media
+        // /.tab-wrap
+      // /.col-sm-6
+    // /.row
+    .row
+      .col-xs-14.col-sm-10.wow.fadeInDown.col-md-offset-1
+        h2 UFRJ Social
+        .tab-wrap
+          .media
+            .parrent.pull-left
+              ul.nav.nav-tabs.nav-stacked
+                li.active
+                  a.tehnical(href='#ufrj-overview', data-toggle='tab') Overview
+                li
+                  a.tehnical(href='#ufrj-technologies', data-toggle='tab') Technologies Used
+                li
+                  a.tehnical(href='#ufrj-source', data-toggle='tab') Source Code
+            .parrent.media-body
+              .tab-content
+                #ufrj-overview.tab-pane.fade.active.in
+                  .media
+                    .pull-left
+                      img.img-responsive(src='images/projects/min/ufrj-min.jpg')
+                    .media-body
+                      h2 Overview
+                      p
+                        | A social network for all UFRJ Campi. It's an application developed for android using
+                        | a web service REST Api. It was part of a cientific iniciation project at laboratório
+                        | DisMo - Núcleo de Computação Eletrônica - NCE, UFRJ.
+                #ufrj-technologies.tab-pane.fade
+                  .media
+                    .media-body
+                      h2 Technologies Used
+                      li Java
+                      li VRaptor (REST Web Service)
+                #ufrj-source.tab-pane.fade
+                  .media
+                    .media-body
+                      h2 Source Code
+                      p Client:
+                      a(href='https://github.com/pamtabak/BradMobile') https://github.com/pamtabak/BradMobile
+                      p Server:
+                      a(href='https://github.com/ericreis/UFRJSocialServer') https://github.com/ericreis/UFRJSocialServer
+              // /.tab-content
+            // /.media-body
+          // /.media
+        // /.tab-wrap
+      // /.col-sm-6
+    // /.row
+    .row
+      .col-xs-14.col-sm-10.wow.fadeInDown.col-md-offset-1
+        h2 CG Handouts
+        .tab-wrap
+          .media
+            .parrent.pull-left
+              ul.nav.nav-tabs.nav-stacked
+                li.active
+                  a.tehnical(href='#cg-overview', data-toggle='tab') Overview
+                li
+                  a.tehnical(href='#cg-technologies', data-toggle='tab') Technologies Used
+                li
+                  a.tehnical(href='#cg-source', data-toggle='tab') Source Code
+            .parrent.media-body
+              .tab-content
+                #cg-overview.tab-pane.fade.active.in
+                  .media
+                    .pull-left
+                      img.img-responsive(src='images/projects/min/cg-handouts-min.jpg')
+                    .media-body
+                      h2 Overview
+                      p
+                        | A group of practical handouts for my Computer Graphics course.
+                #cg-technologies.tab-pane.fade
+                  .media
+                    .media-body
+                      h2 Technologies Used
+                      li C++
+                      li OpenGL
+                #cg-source.tab-pane.fade
+                  .media
+                    .media-body
+                      h2 Source Code
+                      p CG01 - Intersection
+                      a(href='https://github.com/ericreis/cg01-intersection') https://github.com/ericreis/cg01-intersection
+              // /.tab-content
+            // /.media-body
+          // /.media
+        // /.tab-wrap
+      // /.col-sm-6
+    // /.row
+    .row
+      .col-xs-14.col-sm-10.wow.fadeInDown.col-md-offset-1
+        h2 Simple Chat
+        .tab-wrap
+          .media
+            .parrent.pull-left
+              ul.nav.nav-tabs.nav-stacked
+                li.active
+                  a.tehnical(href='#sc-overview', data-toggle='tab') Overview
+                li
+                  a.tehnical(href='#sc-technologies', data-toggle='tab') Technologies Used
+                li
+                  a.tehnical(href='#sc-source', data-toggle='tab') Source Code
+            .parrent.media-body
+              .tab-content
+                #sc-overview.tab-pane.fade.active.in
+                  .media
+                    .pull-left
+                      img.img-responsive(src='images/projects/min/chat-min.jpg')
+                    .media-body
+                      h2 Overview
+                      p
+                        | A simple chat for mobile and desktops. It uses it's own Java Server.
+                #sc-technologies.tab-pane.fade
+                  .media
+                    .media-body
+                      h2 Technologies Used
+                      li Java
+                #sc-source.tab-pane.fade
+                  .media
+                    .media-body
+                      h2 Source Code
+                      p Client:
+                      a(href='https://github.com/ericreis/ChatClient') https://github.com/ericreis/ChatClient
+                      p Server:
+                      a(href='https://github.com/ericreis/ChatServer') https://github.com/ericreis/ChatServer
+              // /.tab-content
+            // /.media-body
+          // /.media
+        // /.tab-wrap
+      // /.col-sm-6
+    // /.row
+  // /.container
+// /#content
+
+include ./layouts/bottom.jade
+
+include ./layouts/footer.jade
