@@ -27,10 +27,13 @@ var cubes = {
     stats: null,
     plane: null,
     selection: null,
+    selectedCube: null,
     offset: new THREE.Vector3(),
     objects: [],
     raycaster: new THREE.Raycaster(),
     prevMousePosition: null,
+    boundary: null,
+    keys: { BACKSPACE: 8, DELETE: 46, D: 68},
 
     init: function() { // Initialization
 
@@ -69,6 +72,7 @@ var cubes = {
         document.addEventListener('mousedown', this.onDocumentMouseDown, false);
         document.addEventListener('mousemove', this.onDocumentMouseMove, false);
         document.addEventListener('mouseup', this.onDocumentMouseUp, false);
+        document.addEventListener('keydown', this.onDocumentKeyDown, false);
 
         // prepare controls (OrbitControls)
         this.controls = new THREE.OrbitControls(this.camera);
@@ -109,13 +113,25 @@ var cubes = {
     },
     
     drawCube: function(x, y, z) {
-        var cube = new THREE.Mesh(new THREE.CubeGeometry(100, 100, 100), new THREE.MeshLambertMaterial({ color: this.getRandColor() }));
+        var cube = new THREE.Mesh(new THREE.CubeGeometry(50, 50, 50), new THREE.MeshLambertMaterial({ color: this.getRandColor() }));
         cube.rotation.x = Math.PI * Math.random();
         cube.position.x = x;
         cube.position.y = y;
         cube.position.z = z;
         cube.castShadow = true;
         return cube;
+    },
+    
+    drawSelection: function(cube) {
+        var boundary = new THREE.Mesh(new THREE.CubeGeometry(55, 55, 55), new THREE.MeshLambertMaterial({ color : 0xffffff, wireframe: true }));
+        boundary.rotation.x = cube.rotation.x;
+        boundary.rotation.y = cube.rotation.y;
+        boundary.rotation.z = cube.rotation.z;
+        boundary.position.x = cube.position.x;
+        boundary.position.y = cube.position.y;
+        boundary.position.z = cube.position.z;
+        boundary.castShadow = true;
+        return boundary;
     },
     
     toRadians: function(degrees) {
@@ -139,7 +155,7 @@ var cubes = {
         cubes.raycaster.set(cubes.camera.position, dir);
 
         switch (event.button) {
-                
+            
             case 0:
                 // find intersected objects
                 var intersects = cubes.raycaster.intersectObjects(cubes.objects);
@@ -151,12 +167,29 @@ var cubes = {
                     
                     // set selection - first intersected object (closest)
                     cubes.selection = intersects[0].object;
+                    
+                    // toogle selected cube
+                    cubes.selectedCube = cubes.selection;
+                    
+                    cubes.scene.remove(cubes.boundary);
+                    if (cubes.selectedCube != null) {
+                        console.log(cubes.objects);
+                        cubes.boundary = cubes.drawSelection(cubes.selection)
+                        cubes.scene.add(cubes.boundary);
+                    }
 
                     // calculate offset
                     var intersects = cubes.raycaster.intersectObject(cubes.plane);
                     cubes.offset.copy(intersects[0].point).sub(cubes.plane.position);
 
                 } else {
+                    
+                    // remove last boundary
+                    cubes.scene.remove(cubes.boundary);
+                    cubes.boundary = null;
+                    
+                    // clear selected cube
+                    cubes.selectedCube = null;
                     
                     var intersects = cubes.raycaster.intersectObject(cubes.plane);
                     var pos = intersects[0].point;
@@ -182,6 +215,15 @@ var cubes = {
                     
                     // set selection - first intersected object (closest)
                     cubes.selection = intersects[0].object;
+                    
+                    // toogle selected cube
+                    cubes.selectedCube = cubes.selection;
+                    
+                    cubes.scene.remove(cubes.boundary)
+                    if (cubes.selectedCube != null) {
+                        cubes.boundary = cubes.drawSelection(cubes.selection)
+                        cubes.scene.add(cubes.boundary);
+                    }
 
                     // calculate offset
                     var intersects = cubes.raycaster.intersectObject(cubes.plane);
@@ -193,10 +235,20 @@ var cubes = {
                         y: pos.y,
                         z: pos.z
                     };
+                } else {
+                    
+                    // remove last boundary
+                    cubes.scene.remove(cubes.boundary);
+                    cubes.boundary = null;
+                    
+                    // clear selected cube
+                    cubes.selectedCube = null;
+                    
                 }
-                break;
-                
+                break; 
         }
+        
+        
         
     },
     
@@ -223,6 +275,7 @@ var cubes = {
                     var intersects = cubes.raycaster.intersectObject(cubes.plane);
                     // reposition the object based on the intersection point with the plane
                     cubes.selection.position.copy(intersects[0].point.sub(cubes.offset));
+                    cubes.boundary.position.copy(cubes.selection.position);
 
                 } else {
 
@@ -251,10 +304,9 @@ var cubes = {
                     z: pos.z - cubes.prevMousePosition.z
                 };
                 
-//                console.log(deltaMove);
-                
                 var deltaRotationquaternion = new THREE.Quaternion().setFromEuler(new THREE.Euler(cubes.toRadians(deltaMove.y * 1), cubes.toRadians(deltaMove.x * 1), 0, 'XYZ'));
                 cubes.selection.quaternion.multiplyQuaternions(deltaRotationquaternion, cubes.selection.quaternion);
+                cubes.boundary.quaternion.multiplyQuaternions(deltaRotationquaternion, cubes.boundary.quaternion);
                 
                 cubes.prevMousePosition = {
                     x: pos.x,
@@ -270,6 +322,20 @@ var cubes = {
         
         cubes.controls.enabled = true;
         cubes.selection = null;
+        
+    },
+    
+    onDocumentKeyDown: function (event) {
+        
+        switch ( event.keyCode ) {
+            case cubes.keys.D:
+                cubes.scene.remove(cubes.selectedCube);
+                cubes.scene.remove(cubes.boundary);
+                cubes.objects.splice(cubes.objects.indexOf(cubes.selectedCube), 1);
+                cubes.selectedCube = null;
+                cubes.boundary = null;
+                break;
+        }
         
     }
     
