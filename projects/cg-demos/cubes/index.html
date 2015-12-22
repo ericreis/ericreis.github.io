@@ -6,12 +6,38 @@
         <title>CG02 - Cubes</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <!--        <link href="css/main.css" rel="stylesheet" type="text/css" />-->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/info.css">
     </head>
     <body>
+        
+        <div id="infoButton"></div>
+        <div id="infoBox" title="Demo Information">
+            <b>CUBE CONTROLS:</b> <br>
+            <ul>
+                <li>Left click on empty space to create new cube.</li>
+                <li>Left/Right click on existing cube to select it.</li>
+                <li>Left click and move mouse to translate selected cube.</li>
+                <li>Right click and move mouse to rotate selected cube.</li>
+                <li>Select cube and press "D" button to delete the cube.</li>
+            </ul>
+            
+            <b>CAMERA CONTROLS:</b> <br>
+            <ul>
+                <li>Left click and move mouse to rotate the camera.</li>
+                <li>Right click and move mouse to translate the camera.</li>
+                <li>Scroll up and down to zoom in and zoom out.</li>
+            </ul>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+            
         <script src="js/three.min.js"></script>
         <script src="js/THREEx.WindowResize.js"></script>
         <script src="js/OrbitControls.js"></script>
         <script src="js/stats.min.js"></script>
+        <script src="js/info.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
