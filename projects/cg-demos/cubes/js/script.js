@@ -304,7 +304,7 @@ var cubes = {
                     z: pos.z - cubes.prevMousePosition.z
                 };
                 
-                var deltaRotationquaternion = new THREE.Quaternion().setFromEuler(new THREE.Euler(cubes.toRadians(deltaMove.y * 1), cubes.toRadians(deltaMove.x * 1), 0, 'XYZ'));
+                var deltaRotationquaternion = new THREE.Quaternion().setFromEuler(new THREE.Euler(- cubes.toRadians(deltaMove.y * 1), cubes.toRadians(deltaMove.x * 1), 0, 'XYZ'));
                 cubes.selection.quaternion.multiplyQuaternions(deltaRotationquaternion, cubes.selection.quaternion);
                 cubes.boundary.quaternion.multiplyQuaternions(deltaRotationquaternion, cubes.boundary.quaternion);
                 
