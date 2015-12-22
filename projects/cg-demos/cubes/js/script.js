@@ -59,7 +59,7 @@ var cubes = {
         this.renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
         this.renderer.setClearColor(this.scene.fog.color);
 
-        this.renderer.shadowMapEnabled = true;
+        this.renderer.shadowMap.enabled = true;
         this.renderer.shadowMapSoft = true;
 
         // prepare container
@@ -113,7 +113,7 @@ var cubes = {
     },
     
     drawCube: function(x, y, z) {
-        var cube = new THREE.Mesh(new THREE.CubeGeometry(50, 50, 50), new THREE.MeshLambertMaterial({ color: this.getRandColor() }));
+        var cube = new THREE.Mesh(new THREE.CubeGeometry(100, 100, 100), new THREE.MeshLambertMaterial({ color: this.getRandColor() }));
         cube.rotation.x = Math.PI * Math.random();
         cube.position.x = x;
         cube.position.y = y;
@@ -123,7 +123,7 @@ var cubes = {
     },
     
     drawSelection: function(cube) {
-        var boundary = new THREE.Mesh(new THREE.CubeGeometry(55, 55, 55), new THREE.MeshLambertMaterial({ color : 0xffffff, wireframe: true }));
+        var boundary = new THREE.Mesh(new THREE.CubeGeometry(105, 105, 105), new THREE.MeshLambertMaterial({ color : 0xffffff, wireframe: true }));
         boundary.rotation.x = cube.rotation.x;
         boundary.rotation.y = cube.rotation.y;
         boundary.rotation.z = cube.rotation.z;
