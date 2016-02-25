@@ -62,7 +62,7 @@ function createIntroText() {
 	var paragraph = [];
 
 	paragraph.push("In a classroom at UFRJ, in the");
-	paragraph.push("middle of the summer ...");
+	paragraph.push("middle of the summer....");
 
 	for (var i = 0; i <= 1; i++) {
 		var text3d = new THREE.TextGeometry( paragraph[i], {
@@ -135,7 +135,7 @@ function createParagraph() {
 	paragraph.push("home at one piece and with your mission");
 	paragraph.push("completed. You are our last hope.");
 
-	paragraph.push("May the force be with you...");
+	paragraph.push("May the force be with you....");
 
 	var size = 20;
 	for (var i = 0; i < paragraph.length; i++) {
