@@ -1,0 +1,44 @@
+#clock {
+	position: absolute;
+    right: 50%;
+    top: 1%;
+    font-size: 50px;
+    color: yellow;
+    text-shadow: 2px 2px 0 black;
+}
+
+#health {
+	position: absolute;
+    right: 32%;
+    top: 4%;
+}
+
+#gunsight {
+	width: 56px;
+	height: 56px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-37px;
+	margin-left:-37px;
+}
+
+#map {
+	width: 30%;
+	height: 35%;
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+}
+
+#points {
+	position: absolute;
+    right: 72%;
+    top: 1%;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
